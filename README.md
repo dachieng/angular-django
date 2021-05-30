@@ -1,4 +1,5 @@
 # Angcrud
+### Simple App Uses Angular on the frontend and django(django rest framework on backend)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
 
