@@ -1,0 +1,49 @@
+<div class="card p-2">
+    <div class="row mb-3">
+        <div class="col-md-8">
+            <h4>Movie Edit : {{movie.title}}</h4>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <form action="" #form="ngForm">
+                <div class="row mb-2 form-group">
+                    <div class="col-md-2">
+                        <label for="">Title</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" [(ngModel)]="movie.title" name="title" class="form-control">
+                    </div>
+                </div>
+                <div class="row mb-2 form-group">
+                    <div class="col-md-2">
+                        <label for="">Genre</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" [(ngModel)]="movie.genre" name="genre" class="form-control">
+                    </div>
+                </div>
+                <div class="row mb-2 form-group">
+                    <div class="col-md-2">
+                        <label for="">Year</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" [(ngModel)]="movie.year" name="year" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-md-2 col-md-3">
+                        <button class="btn btn-success" (click)="updateMovie()" type="submit">Update</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-secondary" (click)="onBack()">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="row mt-2">
+    <h6>{{form.value|json}}</h6>
+</div>

@@ -1,0 +1,61 @@
+<div class="card p-2">
+    <div class="row mb-3">
+        <div class="col-md-8">
+            <h4>Movies Detail</h4>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="columns">
+                <h6>Title</h6>
+                <p>{{movie.title}}</p>
+            </div>
+            <div class="columns">
+                <h6>Genre</h6>
+                <p>{{movie.genre}}</p>
+            </div>
+            <div class="columns">
+                <h6>Release Year</h6>
+                <p>{{movie.year}}</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+
+            <div class="row mb-2">
+                <div class="col-md-12">
+                    <h4>Movie Actions</h4>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-md-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">Title</th>
+                                <th scope="col">Genre</th>
+                                <th scope="col">Release Year</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a [routerLink]="['/movies',movie.id,'edit']" class="btn btn btn-secondary">Edit</a>
+                                </td>
+                                <td>
+                                    <a class="btn btn btn-primary">Create</a>
+                                </td>
+                                <td>
+                                    <button (click)="deleteMovie()" class="btn btn btn-danger">Delete</button>
+
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
